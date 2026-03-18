@@ -130,12 +130,16 @@ buildNumber.properties
 # End of https://www.gitignore.io/api/java,maven,jetbrains
 
 .idea/
+.vscode/
+*.py
 *.iml
 *.ipr
 *.log.*
 allure-results
 
 application.yml
+project_documentation.md
+docs.md
 !src/main/resources/application.yml
 /config/
 /key/
