@@ -68,7 +68,13 @@ public class AccuweatherClient {
             String responseString = response.body().string();
             return objectMapper.readValue(responseString, typeReference);
         } catch (IOException e) {
-            throw new ServiceException("Error with okHttpClient %s".formatted(e.getMessage()), e);
+            throw new ServiceException(
+                String.format(
+                    "Error with okHttpClient %s",
+                    e.getMessage()
+                ),
+                e
+            );
         }
     }
 }
